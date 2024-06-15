@@ -1,7 +1,7 @@
 import { todo } from "./routes/todo";
 import express from "express";
 import { Request, Response } from "express";
-import auth from "./routes/auth";
+import { auth } from "./routes/auth";
 require("dotenv").config();
 
 import { connectDB } from "./config/db";

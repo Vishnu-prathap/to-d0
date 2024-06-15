@@ -7,7 +7,10 @@ export interface Iuser extends Document {
   name: string;
   email: string;
   password: string;
-  comparePassword: (enteredPassword: string) => boolean;
+  // comparePassword:(enteredPassword: string) => boolean;
+  comparePassword: {
+    (comparePassword: string): Promise<boolean>;
+  };
 }
 
 const userSchema = new Schema<Iuser>({
